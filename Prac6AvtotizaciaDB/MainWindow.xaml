@@ -1,0 +1,23 @@
+﻿<Window x:Class="Prac6AvtotizaciaDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prac6AvtotizaciaDB"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="710" Width="1000" MinHeight = "710" MinWidth ="1000"
+        WindowStartupLocation = "CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#FF76E383">
+            <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Right" Cursor="Hand" Click="btnBack_Click"/>
+            <Image HorizontalAlignment="Left" Margin="10,7,0,7" Width="45"  Source="/Resources/Vector.ico"/>
+        </Grid>
+        <Frame x:Name="frContent" Grid.Row="1" NavigationUIVisibility="Hidden" ContentRendered="frContent_Content_ContentRendered" Navigated="frContent_Navigated"/>
+
+    </Grid>
+</Window>
